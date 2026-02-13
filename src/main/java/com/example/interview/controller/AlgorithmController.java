@@ -28,8 +28,7 @@ public class AlgorithmController {
                               .mapToInt(Integer::parseInt)
                               .toArray();
             
-            BinarySearchProblems bs = new BinarySearchProblems();
-            int index = bs.binarySearch(nums, target);
+            int index = BinarySearchProblems.binarySearch(nums, target);
             
             result.put("success", true);
             result.put("array", Arrays.toString(nums));
@@ -66,7 +65,7 @@ public class AlgorithmController {
             result.put("target", target);
             result.put("indices", Arrays.toString(indices));
             result.put("values", indices.length == 2 ? 
-                "[" + nums[indices[0]] + ", " + nums[indices[1]] + "]" : "[]");
+                "[" + indices[0] + ", " + indices[1] + "]" : "[]");
             result.put("message", indices.length == 2 ? "找到两个数" : "未找到符合条件的两个数");
             
         } catch (Exception e) {

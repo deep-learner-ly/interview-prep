@@ -27,12 +27,9 @@ public class AlgorithmDemo {
     
     private static void demoBinarySearch() {
         System.out.println("1. 二分查找算法演示:");
-        BinarySearchProblems bs = new BinarySearchProblems();
-        
         int[] arr = {1, 3, 5, 7, 9, 11, 13, 15};
         int target = 7;
-        
-        int result = bs.binarySearch(arr, target);
+        int result = BinarySearchProblems.binarySearch(arr, target);
         
         System.out.println("数组: " + java.util.Arrays.toString(arr));
         System.out.println("查找目标: " + target);
@@ -43,10 +40,8 @@ public class AlgorithmDemo {
     private static void demoTwoSum() {
         System.out.println("2. 两数之和算法演示:");
         TwoSum ts = new TwoSum();
-        
         int[] nums = {2, 7, 11, 15};
         int target = 9;
-        
         int[] result = ts.twoSumIndex(nums, target);
         
         System.out.println("数组: " + java.util.Arrays.toString(nums));
