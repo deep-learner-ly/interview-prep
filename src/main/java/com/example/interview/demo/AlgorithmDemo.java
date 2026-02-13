@@ -103,9 +103,10 @@ class DeepCloneUtil {
 
 // 测试用的实体类
 class Person implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
     private String name;
     private int age;
-    private java.util.List<Address> addresses;
+    private transient java.util.List<Address> addresses;
     
     public Person() {}
     public Person(String name, int age) {
@@ -122,6 +123,7 @@ class Person implements java.io.Serializable {
 }
 
 class Address implements java.io.Serializable {
+    private static final long serialVersionUID = 1L;
     private String city;
     private String street;
     
